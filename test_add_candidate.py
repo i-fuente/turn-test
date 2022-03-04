@@ -1,5 +1,3 @@
-from turtle import clear
-from typing import ItemsView
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote.webdriver import WebDriver
@@ -14,16 +12,14 @@ import data_handler
 driver : WebDriver = None
 
 def setup():
+    #driver setup
     global driver
     browser = 'chrome'
     driver = selenium_driver.get_driver(browser)
     return driver
+    
 
-#def path():
-#    path = "src/test/resources/testData/twt_Pic.jpg";
-#    file = new File(new File(path).getAbsolutePath());
-
-def test_login():
+def test_add_candidate():
     #login
     driver.get(data_handler.url) 
     driver.maximize_window()
@@ -33,7 +29,7 @@ def test_login():
     user_pass.send_keys(data_handler.user_pass)
     login_button : WebElement = driver.find_element(By.ID, 'btnLogin')
     login_button.click()
-    
+
     #recrutement menu
     action = ActionChains(driver)
 
@@ -42,7 +38,9 @@ def test_login():
     secondLevelMenu = driver.find_element_by_id("menu_recruitment_viewRecruitmentModule")
     action.move_to_element(secondLevelMenu).perform()
     secondLevelMenu.click()
-
+    
+    
+    
     #new candidate
     add_button : WebElement = driver.find_element(By.ID, 'btnAdd')
     add_button.click()
@@ -74,10 +72,6 @@ def test_login():
     save_button.click()
     form_addcandidate : WebElement = driver.find_element(By.ID, 'frmAddCandidate')
     assert form_addcandidate.is_displayed() , 'Successfully Saved'
-
-
-
-
     
     time.sleep(6)
 
