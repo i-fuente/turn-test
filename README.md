@@ -53,5 +53,5 @@ This file will handle the used data for test, just need to change the values her
 This file habdle the driver path for the given browser on the data handler **DO NOT TOUCH THIS FILE**
 
 ### Allure
-This folder contains the reports reasults
+This folder contains the reports results
 
