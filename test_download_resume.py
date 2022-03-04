@@ -42,12 +42,6 @@ def test_candidate_search():
     download_file : WebElement = driver.find_element_by_partial_link_text('Download')
     download_file.click()
 
-
-
-
-
-
-
     time.sleep(6)
 
 def teardown():
