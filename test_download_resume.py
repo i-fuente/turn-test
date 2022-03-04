@@ -9,8 +9,7 @@ from selenium.webdriver.common.by import By
 
 def setup():
     global driver
-    browser = 'chrome'
-    driver = selenium_driver.get_driver(browser)
+    driver = selenium_driver.get_driver(data_handler.browser)
     return driver
 
 def test_candidate_search():

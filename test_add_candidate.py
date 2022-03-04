@@ -14,8 +14,7 @@ driver : WebDriver = None
 def setup():
     #driver setup
     global driver
-    browser = 'chrome'
-    driver = selenium_driver.get_driver(browser)
+    driver = selenium_driver.get_driver(data_handler.browser)
     return driver
     
 

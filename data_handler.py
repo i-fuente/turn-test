@@ -12,7 +12,7 @@ vacancy = 'Senior QA Lead'
 keywords = 'Jira, python, SQL'
 comments = 'Comment 1'
 date = '2022-03-02'
-browser = 'chrome'
+browser = 'firefox'
 
 
 
